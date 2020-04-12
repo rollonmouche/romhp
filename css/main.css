@@ -1,5 +1,5 @@
 
-@import url(normalize/normalize.css);
+@import url(../../normalize.css/normalize.css);
 @import url(constants.css);
 @import url(../../fonts/league-spartan/_webfonts/stylesheet.css);
 @import url(screen.css);
