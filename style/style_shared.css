@@ -2,7 +2,7 @@
 
 @font-face { 
 	font-family: "ROM";
-        src: url("fonts/Plaza-P-OT-Ultra_35974.ttf") format("truetype"); 
+        src: url("../fonts/Plaza-P-OT-Ultra_35974.ttf") format("truetype"); 
              /*url("a_love_of_thunder.woff") format("woff"),*/
              /*url("a_love_of_thunder.svg") format("svg");*/
 }
