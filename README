@@ -1,13 +1,13 @@
 
 1. Run local webserver:
 
-cd path/to/this/directory/
+cd path/to/this/directory/../
 python3 -m http.server
 
 
 2. Open website in Browser:
 
-localhost:8000
+localhost:8000/romhp/index.html
 
 
 Reference:
