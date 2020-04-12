@@ -1,0 +1,38 @@
+
+@media screen {
+
+.footer {
+    text-align: center;
+    color: var(--rom-lightgrey);
+    background-color: var(--rom-red);
+    padding: 10px 20px;
+    width: 100%;
+    /*border: 3px solid green;*/
+    border-bottom: solid 6px var(--rom-blue);
+}
+
+.footer div.socialmedia {
+    font-size: 150%;
+    padding-bottom: 22px;
+}
+
+.footer div.imprint {
+    font-size: 75%;
+}
+
+.footer a {
+    color: var(--rom-lightgrey);
+    text-decoration: none;
+    padding: 0 12px;
+    margin: 0 0;
+}
+.footer a:hover,
+.footer a:focus {
+    text-decoration: none;
+    color: var(--rom-grey);
+}
+.footer a:active {
+    color: var(--rom-lightgrey);
+}
+
+} /* @media */

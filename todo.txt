@@ -1,0 +1,6 @@
+
+* commit und push
+* Media-Query-Werte anpassen
+
+* Burgermenu: Statt links zu menu und wrapper lieber scroll nach Top/Bottom?
+* Raleway als Brotschrift testen

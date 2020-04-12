@@ -1,0 +1,89 @@
+/* Stylesheet für die Beispielsite aus "Einstieg in CSS" */
+
+@media screen {
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--rom-darkgrey);
+    /*background-image: url(../img/muster.png);*/
+    background-repeat: repeat;
+    background-attachment: fixed; /* fixed, scroll */
+    color: var(--rom-lightgrey);
+    font-family: 'League Spartan';
+    font-size: 145%; /* 87.5%;*/
+    line-height: 1.4;
+    /*border: 1px solid var(--rom-orange);*/
+}
+div#wrapper {
+    background-color: var(--rom-red);
+    color: var(--rom-grey);
+    width: 100%;
+    margin: 0 auto;
+}
+main#content_area {
+    color: var(--rom-lightgrey);
+    padding: 0px var(--content-padding-lr);
+    padding-bottom: 600px; /* for testing, to force scrolling */
+    /*margin-top: 120px;*/ /* some value needed if header bar is fixed */
+    /*margin: 0 auto;*/
+    /*border: 2px solid green;*/
+}
+div.content {
+    /*width: 100%;*/
+    /*margin: 0 auto;*/
+    /*margin-top: 90px;*/
+    /*border: 1px solid var(--rom-orange);*/
+}
+
+a {
+    text-decoration: none;
+}
+main a {
+    text-decoration: underline;
+}
+a:link,
+a:visited {
+    color: var(--rom-lightgrey);
+}
+a:hover, a:focus {
+    color: var(--rom-blue);
+    /*text-decoration: none;*/
+}
+a:active {
+    color: var(--rom-grey);
+    /*background-color: var(--rom-blue);*/
+}
+
+
+/* *****************************
+ * Stuff
+ * ***************************** */
+/*
+.floatleft {
+    float:left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.floatright {
+    float:right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.clearing { clear: both; }
+*/
+
+/* Micro-clearfix-Hack */
+/*
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+*/
+
+} /* @media */

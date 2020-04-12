@@ -1,0 +1,14 @@
+
+1. Run local webserver:
+
+cd path/to/this/directory/
+python3 -m http.server
+
+
+2. Open website in Browser:
+
+localhost:8000
+
+
+Reference:
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server

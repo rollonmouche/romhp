@@ -1,0 +1,16 @@
+
+:root {
+    --rom-red : #761E40;
+    --rom-blue : #15214B;
+    --rom-lightgrey : #E8E8E8;
+    --rom-grey : #CCCCCC;
+    --rom-darkgrey : #333333;
+    --rom-orange : #E55741;
+    
+    /*--content-padding-lr: 150px;*/
+    --content-padding-lr: 8%;
+    --navitem-padding-lr: 15px;
+    
+    --mobile_logo_height: 24px;
+    --burger-padding: 6px;
+}

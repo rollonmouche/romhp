@@ -1,0 +1,57 @@
+<!-- Automatically generated file by make_pages.py -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Roll on Mouche</title>
+    <meta name="description" content="Bluesrock à la Roll on Mouche">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="img/favicon.jpg" rel="shortcut icon">
+     <!-- Load font awesome icon library (social media icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/w3-include-html.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        
+        <div class="mobile_header">
+            <!-- burgermenu -->
+            <a id="rom_burger" href="#header_area">
+                <img id="rom_burger_img"
+                    src="img/rom_burger.png"
+                    alt="Menu">
+            </a>
+            <img id="logo_img_mobile"
+                src="img/headerlogo.png"
+                alt="Roll on Mouche">
+        </div>
+        
+        <nav id="header_area" class="header">
+            <a id="logo" href="index.html">
+                <img id="logo_img"
+                    src="img/headerlogo.png"
+                    alt="Roll on Mouche">
+            </a>
+            <div class="menucontainer">
+                <a class="noactive burgeronly" href="index.html">Home</a>
+                <a class="noactive" href="live.html">Live</a>
+                <a class="noactive" href="media.html">Media</a>
+                <a class="noactive" href="booking.html">Booking</a>
+                <a class="active burgeronly" href="imprint.html">Impressum</a>
+                <a class="noactive burgeronly" href="#wrapper" style="font-size: 150%">&times;</a>
+            </div>
+        </nav>
+        
+        <main id="content_area" w3-include-html="imprint_content.html"></main>
+        <footer class="footer" w3-include-html="footer.html"></footer>
+        
+        <script>
+            includeHTML();
+        </script>
+    </div>
+</body>
+
+</html>
