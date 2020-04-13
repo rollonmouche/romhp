@@ -26,17 +26,14 @@ div#wrapper {
 }
 main#content_area {
     color: var(--rom-lightgrey);
-    padding: 0px var(--content-padding-lr);
-    padding-bottom: 600px; /* for testing, to force scrolling */
+    padding: 0;
     /*margin-top: 120px;*/ /* some value needed if header bar is fixed */
-    /*margin: 0 auto;*/
-    /*border: 2px solid green;*/
+    /* border: 5px solid green; */
 }
 div.content {
-    /*width: 100%;*/
-    /*margin: 0 auto;*/
-    /*margin-top: 90px;*/
-    /*border: 1px solid var(--rom-orange);*/
+    padding: 0px var(--content-padding-lr);
+    padding-bottom: 600px; /* for testing, to force scrolling */
+    /* border: 2px solid var(--rom-orange); */
 }
 
 a {

@@ -1,4 +1,4 @@
-<!-- Automatically generated file by make_pages.py -->
+<!-- Automatically generated file by make.py -->
 <!DOCTYPE html>
 <html lang="de">
 
@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="css/main.css" rel="stylesheet">
     <link href="img/favicon.jpg" rel="shortcut icon">
-    <script src="js/w3-include-html.js"></script>
 
     <script src="../better-simple-slideshow/demo/js/hammer.min.js"></script><!-- for swipe support on touch interfaces -->
     <script src="../better-simple-slideshow/js/better-simple-slideshow.min.js"></script>
@@ -47,34 +46,30 @@
             </div>
         </nav>
         
-        <div class="bss-slides">
-            <figure><img src="../better-simple-slideshow/demo/img/medium.jpg"></figure>
-            <figure><img src="../better-simple-slideshow/demo/img/colorado.jpg"></figure>
-            <figure><img src="../better-simple-slideshow/demo/img/monte-vista.jpg"></figure>
-            <figure><img src="../better-simple-slideshow/demo/img/sunrise.jpg"></figure>
-            <figure><img src="../better-simple-slideshow/demo/img/colorado-colors.jpg"></figure>
-        </div>
+        <main id="content_area">
+            <div class="content">
+                <h1>Booking</h1>
+                <p>Gehen Sie weiter! Hier gibt es nichts zu sehen!</p>
+            </div> <!-- Do not remove this line! -->
+        </main>
 
-        <main id="content_area" w3-include-html="booking_content.html"></main>
-        <footer class="footer" w3-include-html="footer.html"></footer>
-        
-        <script>
-            includeHTML();
-        </script>
-        
-        <script>
-            var opts = {
-                auto : {
-                    speed : 4000, 
-                    pauseOnHover : true
-                },
-                fullScreen : false,
-                swipe : true
-            };
-            makeBSS('.bss-slides', opts);
-        </script>
-    
-</div>
+        <footer class="footer">
+            <div class="socialmedia">
+                <a href="https://de-de.facebook.com/Roll.on.Mouche" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/channel/UCYA3xRX_ZTZ-mnjr1jv0f7A" target="_blank" class="fa fa-youtube-play"></a>
+                <a href="https://soundcloud.com/roll-on-mouche" target="_blank" class="fa fa-soundcloud"></a>
+                <a href="#" target="_blank" class="fa fa-spotify"></a>
+                <!--
+                <a href="#" target="_blank" class="fa fa-google"></a>
+                <a href="#" target="_blank" class="fa fa-apple"></a>
+                -->
+            </div>
+            <div class="imprint">
+                <a href="imprint.html">Impressum</a>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
+
