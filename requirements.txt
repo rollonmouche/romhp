@@ -1,5 +1,0 @@
-Repositories to be placed parallel to this repo:
-
-https://github.com/necolas/normalize.css.git
-https://github.com/theleagueof/league-spartan.git
-https://github.com/leemark/better-simple-slideshow.git
