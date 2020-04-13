@@ -122,6 +122,7 @@ nav {
     /*background: var(--rom-blue);*/
 }
 .mobile_header {
+    z-index: 10;
     /*display: table;*/
     display: block;
     background: var(--rom-red);
@@ -129,7 +130,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    /*height: 45px;*/
+    height: var(--mobile-header-height);
     /*box-sizing: border-box;*/
     padding: 6px var(--content-padding-lr) 4px var(--content-padding-lr);
 }
@@ -146,6 +147,9 @@ a#logo {
     padding: 0;
     margin: var(--burger-padding) 0;
     /*border: 1px solid green;*/
+}
+.bss-slides {
+    margin-top: var(--mobile-header-height);
 }
 .mobile_header a {
     display: block;

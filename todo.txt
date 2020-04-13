@@ -1,6 +1,9 @@
 
-* commit und push
-* Media-Query-Werte anpassen
+* clone league-spartan from github (see requirements.txt) Multiple weights available!
+
+* make slideshow part of main#content_area, but only on index.html!
 
 * Burgermenu: Statt links zu menu und wrapper lieber scroll nach Top/Bottom?
 * Raleway als Brotschrift testen
+
+* Imprint: auch Bildnachweise, externe Repos

@@ -6,6 +6,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    overflow-x: hidden;
     background-color: var(--rom-darkgrey);
     /*background-image: url(../img/muster.png);*/
     background-repeat: repeat;
@@ -21,6 +22,7 @@ div#wrapper {
     color: var(--rom-grey);
     width: 100%;
     margin: 0 auto;
+    /*border: 2px solid green;*/
 }
 main#content_area {
     color: var(--rom-lightgrey);

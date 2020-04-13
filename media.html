@@ -9,17 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="css/main.css" rel="stylesheet">
     <link href="img/favicon.jpg" rel="shortcut icon">
-     <!-- Load font awesome icon library (social media icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/w3-include-html.js"></script>
+
+    <script src="../better-simple-slideshow/demo/js/hammer.min.js"></script><!-- for swipe support on touch interfaces -->
+    <script src="../better-simple-slideshow/js/better-simple-slideshow.min.js"></script>
 </head>
 
 <body>
     <div id="wrapper">
         
-        <div class="mobile_header">
-            <!-- burgermenu -->
-            <a id="rom_burger" href="#header_area">
+        <!-- only displayed on mobile screens -->
+        <header class="mobile_header">
+            <a id="rom_burger" href="#navi_area">
                 <img id="rom_burger_img"
                     src="img/rom_burger.png"
                     alt="Menu">
@@ -27,10 +28,11 @@
             <img id="logo_img_mobile"
                 src="img/headerlogo.png"
                 alt="Roll on Mouche">
-        </div>
+        </header>
         
-        <nav id="header_area" class="header">
-            <a id="logo" href="index.html">
+        <!-- navigation bar or mobile menu -->
+        <nav id="navi_area">
+            <a id="logo" href="index.html" tabindex="1" autofocus>
                 <img id="logo_img"
                     src="img/headerlogo.png"
                     alt="Roll on Mouche">
@@ -45,13 +47,34 @@
             </div>
         </nav>
         
+        <div class="bss-slides">
+            <figure><img src="../better-simple-slideshow/demo/img/medium.jpg"></figure>
+            <figure><img src="../better-simple-slideshow/demo/img/colorado.jpg"></figure>
+            <figure><img src="../better-simple-slideshow/demo/img/monte-vista.jpg"></figure>
+            <figure><img src="../better-simple-slideshow/demo/img/sunrise.jpg"></figure>
+            <figure><img src="../better-simple-slideshow/demo/img/colorado-colors.jpg"></figure>
+        </div>
+
         <main id="content_area" w3-include-html="media_content.html"></main>
         <footer class="footer" w3-include-html="footer.html"></footer>
         
         <script>
             includeHTML();
         </script>
-    </div>
+        
+        <script>
+            var opts = {
+                auto : {
+                    speed : 4000, 
+                    pauseOnHover : true
+                },
+                fullScreen : false,
+                swipe : true
+            };
+            makeBSS('.bss-slides', opts);
+        </script>
+    
+</div>
 </body>
 
 </html>

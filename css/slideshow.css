@@ -1,0 +1,122 @@
+*{margin:0;padding:0;}
+
+.bss-slides{
+  position: relative;
+  display: block; 
+  line-height: 0;/*removes the gap if you put a border on the slideshow div*/   
+  border-bottom: 6px solid var(--rom-blue);
+}
+.bss-slides:focus{
+ outline: 0;
+}
+.bss-slides figure{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.bss-slides figure:first-child{
+  position: relative;
+}
+.bss-slides figure img{
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 1.2s;
+  transition: opacity 1.2s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.bss-slides .bss-show{
+  z-index: 2;
+}
+.bss-slides .bss-show img{
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: relative; 
+}
+
+.bss-next, .bss-prev{
+  color: var(--rom-grey);
+  position: absolute;
+  /* background: rgba(0,0,0,0); */
+  opacity: 0.3;
+  height: 100%;
+  top: 0%;
+  padding-top: 25%;
+  z-index: 4;
+  font-size: 2em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bss-next:hover, .bss-prev:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+.bss-next{
+  right: 0;
+  padding-left: 30%;
+  padding-right: 3%;
+}
+.bss-prev{
+  left: 0;
+  padding-left: 3%;
+  padding-right: 30%;
+}
+
+/********** fullscreen stuff *************/
+/* 
+.bss-fullscreen{
+  display: block;
+  z-index: 5;
+  width: 20px;
+  height: 20px;    
+  background: rgba(0,0,0,0) url(../img/arrows-alt_ffffff_64.png); 
+  -webkit-background-size: contain; 
+  background-size: contain;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;    
+  opacity: .3;
+} 
+.bss-fullscreen:hover{
+  opacity: .8;   
+}
+:-webkit-full-screen .bss-fullscreen{
+    background: rgba(0,0,0,0) url(../img/compress_ffffff_64.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+:-moz-full-screen .bss-fullscreen{
+    background: rgba(0,0,0,0) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:-ms-fullscreen .bss-fullscreen{
+    background: rgba(0,0,0,0) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:full-screen .bss-fullscreen{
+    background: rgba(0,0,0,0) url(../img/compress_ffffff_64.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+:-webkit-full-screen .bss-fullscreen{
+    background: rgba(0,0,0,0) url(../img/compress_ffffff_64.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+:-moz-full-screen .bss-fullscreen{
+    background: rgba(0,0,0,0) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:-ms-fullscreen .bss-fullscreen{
+    background: rgba(0,0,0,0) url(../img/compress_ffffff_64.png);
+    background-size: contain;
+}
+:fullscreen .bss-fullscreen{
+    background: rgba(0,0,0,0) url(../img/compress_ffffff_64.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+} */
