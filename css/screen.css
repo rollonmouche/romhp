@@ -12,9 +12,10 @@ body {
     background-repeat: repeat;
     background-attachment: fixed; /* fixed, scroll */
     color: var(--rom-lightgrey);
-    font-family: 'League Spartan';
-    font-size: 145%; /* 87.5%;*/
-    line-height: 1.4;
+    font-family: 'League Spartan Bold';
+    font-weight: bold;
+    font-size: 145%;
+    line-height: 1.6;
     /*border: 1px solid var(--rom-orange);*/
 }
 div#wrapper {
@@ -32,8 +33,13 @@ main#content_area {
 }
 div.content {
     padding: 0px var(--content-padding-lr);
-    padding-bottom: 600px; /* for testing, to force scrolling */
+    padding-bottom: 300px; /* for testing, to force scrolling */
     /* border: 2px solid var(--rom-orange); */
+}
+div.light {
+    font-family: 'League Spartan';
+    font-weight: 300;
+    font-size: 120%;
 }
 
 a {
