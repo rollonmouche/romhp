@@ -1,6 +1,2 @@
 
-* clone league-spartan from github (see requirements.txt). Multiple weights available!
-
-* Burgermenu: Statt links zu menu und wrapper lieber scroll nach Top/Bottom?
-
 * Imprint: auch Bildnachweise, externe Repos
