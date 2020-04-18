@@ -1,0 +1,50 @@
+
+table {
+    margin: 1em auto;
+    margin-bottom: 3em;
+    width: 100%;
+    /* width: auto; */
+    border-collapse: collapse;
+    border-top: 4px solid var(--rom-blue);
+}
+
+caption {
+    /* display: none; */
+    font-size: 150%;
+    padding-top: 0em;
+    padding-bottom: 0.4em;
+}
+thead {
+    display: none;
+}
+
+td {
+    /* border: 1px solid var(--rom-orange); */
+    padding: 0.8em 0.8em 0 0.8em;
+}
+
+th, td {
+    vertical-align: top;
+}
+td.gigdate {
+    text-align: right;
+}
+td.venue {
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  
+th, td {
+    display: block;
+    padding: 0 0.4em;
+}
+td.gigdate{
+    text-align: left;
+    padding-top: 0.4em;
+}
+td.venue {
+    border-bottom: 4px solid var(--rom-blue);
+    padding-bottom: 0.2em;
+}
+}
