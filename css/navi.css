@@ -169,6 +169,10 @@ main#content_area {
     margin-left: 4px;
     /*border: 1px solid orange;*/
 }
+nav a.menuexit:hover {
+    background: none;
+    color: var(--rom-blue);
+}
 #rom_burger_img {
     /*display: table-cell;*/
     /*vertical-align: bottom;*/
