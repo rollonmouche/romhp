@@ -8,15 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="css/main.css" rel="stylesheet">
     <link href="img/favicon.jpg" rel="shortcut icon">
-
-    <script src="../better-simple-slideshow/demo/js/hammer.min.js"></script><!-- for swipe support on touch interfaces -->
+    <!-- for swipe support on touch interfaces: -->
+    <script src="../better-simple-slideshow/demo/js/hammer.min.js"></script>
     <script src="../better-simple-slideshow/js/better-simple-slideshow.min.js"></script>
 </head>
 
 <body>
     <div id="wrapper">
-        
-        <!-- only displayed on mobile screens -->
+        <!-- header only displayed on mobile screens: -->
         <header class="mobile_header">
             <a id="rom_burger" href="#navi_area">
                 <img id="rom_burger_img"
@@ -82,14 +81,24 @@
                 makeBSS('.bss-slides', opts);
             </script>
             
-            <div class="content">
-                <h1>Welcome</h1>
-                <p>Hi, we are Roll on Mouche!</p>
-            </div>
-            <div class="content light">
-                <p>Hi, we are Roll on Mouche!</p>
-            </div>
-
+            <section>
+                <article>
+                    <div class="tile_content iframe_container">
+                        <iframe src="https://www.youtube.com/embed/Whco8I8Nsys?color=white"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="more_button"><a href="media.html">More videos</a></div>
+                </article>
+                
+                <article>
+                    <div class="tile_content">
+                        <h2>Upcoming Shows</h2>
+                        <p>No upcoming shows</p>
+                    </div>
+                    <div class="more_button"><a href="live.html">All shows</a></div>
+                </article>
+            </section>
             <!-- #include-html-end --> <!-- Do not remove this line! -->
         </main>
 

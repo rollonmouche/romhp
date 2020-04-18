@@ -1,5 +1,3 @@
-/* Stylesheet für die Beispielsite aus "Einstieg in CSS" */
-
 @media screen {
 
 html {
@@ -31,26 +29,14 @@ main#content_area {
     /*margin-top: 120px;*/ /* some value needed if header bar is fixed */
     /* border: 5px solid green; */
 }
-div.content {
-    padding: 0px var(--content-padding-lr);
-    padding-bottom: 300px; /* for testing, to force scrolling */
-    /* border: 2px solid var(--rom-orange); */
-}
-div.light {
-    font-family: 'League Spartan';
-    font-weight: 300;
-    font-size: 120%;
-}
 
 a {
     text-decoration: none;
 }
-main a {
-    text-decoration: underline;
-}
 a:link,
 a:visited {
     color: var(--rom-lightgrey);
+    color: var(--rom-grey);
 }
 a:hover, a:focus {
     color: var(--rom-blue);

@@ -26,6 +26,10 @@ nav a {
     border-radius: 8px;
     padding: 3px var(--navitem-padding-lr) 0 var(--navitem-padding-lr);
 }
+nav a:link,
+nav a:visited {
+    color: var(--rom-lightgrey);
+}
 nav a:hover {
     background: var(--rom-blue);
     color: var(--rom-lightgrey);
@@ -148,7 +152,7 @@ a#logo {
     margin: var(--burger-padding) 0;
     /*border: 1px solid green;*/
 }
-.bss-slides {
+main#content_area {
     margin-top: var(--mobile-header-height);
 }
 .mobile_header a {

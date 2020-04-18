@@ -3,7 +3,8 @@
 @import url(constants.css);
 @import url(league-spartan.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css); /* social media icons */
-@import url(slideshow.css);
-@import url(screen.css);
 @import url(navi.css);
+@import url(screen.css);
+@import url(slideshow.css);
+@import url(content.css);
 @import url(footer.css);
