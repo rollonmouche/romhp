@@ -32,6 +32,35 @@ def get_file_content(filename):
     return content
 
 
+def include_html(infile, outfile, includefile, begin_marker, end_marker):
+    """Include an html snippet into another html file.
+
+    Parameters:
+    -----------
+    infile : str
+        Name of file into which snippet shall be included
+    outfile : str
+        Name of new created file with included snippet
+    includefile : str
+        Name of file containing snippet to be included
+    begin_marker : str
+        Marker indicating begin of include
+    end_marker : str
+        Marker indicating end of include
+    """
+    source_data = get_file_content(infile)
+    idx_begin = source_data.find(begin_marker)
+    idx_end = source_data.find(end_marker, idx_begin) + len(end_marker)
+    indent_len = idx_begin - source_data.rfind('\n', 0, idx_begin) - 1
+    indent = ' '*indent_len
+    text_to_replace = source_data[idx_begin:idx_end]
+    content = get_file_content(includefile)
+    content = content.replace('\n', '\n' + indent)
+    outdata = source_data.replace(text_to_replace, content)
+    with open(outfile, 'w') as ofile:
+        ofile.write(outdata)
+
+
 def make_pages(
     pages=PAGES,
     basefile=BASE_FILE,
@@ -40,22 +69,11 @@ def make_pages(
     pagefile_pattern=PAGEFILE_PATTERN,
     includefile_pattern=INCLUDEFILE_PATTERN,
 ):
-    source_data = get_file_content(basefile)
-    idx_begin = source_data.find(begin_marker)
-    idx_end = source_data.find(end_marker, idx_begin) + len(end_marker)
-    indent_len = idx_begin - source_data.rfind('\n', 0, idx_begin) - 1
-    indent = ' '*indent_len
-    text_to_replace = source_data[idx_begin:idx_end]
     print('make pages …')
     for page in pages:
-        output_filename = pagefile_pattern.format(page)
-        with open(output_filename, 'w') as outfile:
-            print(output_filename)
-            outfile.write('<!-- Automatically generated file by make.py -->\n')
-            content = get_file_content(includefile_pattern.format(page))
-            content = content.replace('\n', '\n' + indent)
-            outdata = source_data.replace(text_to_replace, content)
-            outfile.write(outdata)
+        outfile = pagefile_pattern.format(page)
+        includefile = includefile_pattern.format(page)
+        include_html(basefile, outfile, includefile, begin_marker, end_marker)
         
 
 def set_active_class(
