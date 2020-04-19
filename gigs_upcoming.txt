@@ -1,15 +1,10 @@
 
 #mei2020
 date: 8.4.2020
-venue: Meisenfrei, Bremen
+venue: Meisenfrei, Bremen – FÄLLT AUS! –
 url: http://meisenfrei.de
 
 #pack2020
 date: 3.7.2020
 venue: Packhalle Open Air, Sögel
 url: http://www.packhalle-openair.de
-
-#alh2019
-date: 9.11.2019
-venue: Götterdämnerung, Alhambra, Oldenburg
-add: (w/ Satans of Swing, Rustÿ Slämmer, and Jammin’ Johnny & the Diskofuckers)

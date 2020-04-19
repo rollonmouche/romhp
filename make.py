@@ -155,7 +155,7 @@ def write_gig_tables_html(tables, outfile):
 def main():
     upcoming_table = create_gig_table(
         gigfile='gigs_upcoming.txt',
-        title='Upcoming Shows',
+        title='Upcoming',
         set_hyperlink=True,
     )
     done_table = create_gig_table(
