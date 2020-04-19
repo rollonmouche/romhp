@@ -9,7 +9,7 @@ body {
     /*background-image: url(../img/muster.png);*/
     background-repeat: repeat;
     background-attachment: fixed; /* fixed, scroll */
-    color: var(--rom-grey);
+    color: var(--rom-lightgrey);
     font-family: 'League Spartan Bold';
     font-weight: bold;
     font-size: 145%;
@@ -33,14 +33,14 @@ a {
 }
 a:link,
 a:visited {
-    color: var(--rom-lightgrey);
+    color: var(--rom-grey);
 }
 a:hover, a:focus {
     color: var(--rom-blue);
     /*text-decoration: none;*/
 }
 a:active {
-    color: var(--rom-lightgrey);
+    color: var(--rom-grey);
     /*background-color: var(--rom-blue);*/
 }
 

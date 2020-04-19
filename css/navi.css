@@ -25,7 +25,10 @@ nav a {
     border-radius: 8px;
     padding: 3px var(--navitem-padding-lr) 0 var(--navitem-padding-lr);
 }
-
+nav a:link,
+nav a:visited {
+    color: var(--rom-lightgrey);
+}
 nav a:hover {
     background: var(--rom-blue);
     color: var(--rom-lightgrey);
@@ -36,9 +39,6 @@ nav a.active {
 nav a#logo {
     padding-top: 6px;
     padding-right: 0;
-}
-nav a#logo:hover {
-    background: var(--rom-blue);
 }
 #logo_img {
     height: 65px;
