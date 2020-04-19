@@ -125,9 +125,12 @@ def gig2html(gig, set_hyperlink=True):
 def create_gig_table(gigfile, title, set_hyperlink=True):
     keys = ['date', 'venue', 'url', 'add']
     gigs = load_gigs(gigfile, keys)
-    gigs_html = []
-    for gig in gigs:
-        gigs_html += [gig2html(gig, set_hyperlink=set_hyperlink)]
+    if gigs:
+        gigs_html = []
+        for gig in gigs:
+            gigs_html += [gig2html(gig, set_hyperlink=set_hyperlink)]
+    else:
+        gigs_html = ['<tr><td style="text-align: center">No upcoming shows</td></tr>']
     
     html_lines = [
         '<table role="table" aria-label="{}">'.format(title),
