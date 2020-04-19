@@ -13,10 +13,6 @@ article {
     flex-basis: 350px;
     display: flex;
     flex-direction: column;
-    /* font-family: 'League Spartan';
-    font-weight: 200;
-    font-size: 120%; */
-    /* background: var(--rom-blue); */
     padding: 0px;
     margin: 16px;
     border-bottom: 4px solid var(--rom-blue);

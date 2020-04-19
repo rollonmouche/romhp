@@ -7,20 +7,16 @@ table {
     border-collapse: collapse;
     border-top: 4px solid var(--rom-blue);
 }
-
 caption {
     /* display: none; */
     font-size: 150%;
     padding-top: 0em;
     padding-bottom: 0.4em;
 }
-thead {
-    display: none;
-}
-
 td {
     /* border: 1px solid var(--rom-orange); */
-    padding: 0.8em 0.8em 0 0.8em;
+    padding: 0.8em 0.8em 0.4em 0.8em;
+    line-height: 1.4em;
 }
 
 th, td {
@@ -32,19 +28,27 @@ td.gigdate {
 td.venue {
     text-align: left;
 }
+td p.venueadd {
+    font-family: 'League Spartan';
+    font-weight: 200;
+    font-size: 120%;
+}
 
 @media only screen and (max-width: 600px) {
   
 th, td {
     display: block;
-    padding: 0 0.4em;
+    padding: 0.2em 0.4em;
 }
 td.gigdate{
     text-align: left;
-    padding-top: 0.4em;
+    padding-top: 0.5em;
 }
 td.venue {
     border-bottom: 4px solid var(--rom-blue);
+    padding-bottom: 0.2em;
+}
+td p.venueadd {
     padding-bottom: 0.2em;
 }
 }
