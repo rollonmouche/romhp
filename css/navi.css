@@ -20,16 +20,12 @@ nav {
 }
 nav a {
     float: left;
-    color: var(--rom-lightgrey);
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
     padding: 3px var(--navitem-padding-lr) 0 var(--navitem-padding-lr);
 }
-nav a:link,
-nav a:visited {
-    color: var(--rom-lightgrey);
-}
+
 nav a:hover {
     background: var(--rom-blue);
     color: var(--rom-lightgrey);
@@ -70,10 +66,6 @@ nav a#logo:hover {
 }
 .menucontainer a {
     margin-top: 10px;
-}
-
-nav a {
-    /*padding: 10px*/
 }
 
 a#logo {

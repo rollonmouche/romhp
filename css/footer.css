@@ -3,8 +3,6 @@
 
 .footer {
     text-align: center;
-    color: var(--rom-lightgrey);
-    background-color: var(--rom-red);
     padding: 10px 20px;
     width: 100%;
     /*border: 3px solid green;*/

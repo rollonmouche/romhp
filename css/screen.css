@@ -9,7 +9,7 @@ body {
     /*background-image: url(../img/muster.png);*/
     background-repeat: repeat;
     background-attachment: fixed; /* fixed, scroll */
-    color: var(--rom-lightgrey);
+    color: var(--rom-grey);
     font-family: 'League Spartan Bold';
     font-weight: bold;
     font-size: 145%;
@@ -18,13 +18,11 @@ body {
 }
 div#wrapper {
     background-color: var(--rom-red);
-    color: var(--rom-grey);
     width: 100%;
     margin: 0 auto;
     /* border: 2px solid green; */
 }
 main#content_area {
-    color: var(--rom-lightgrey);
     padding: 0;
     /*margin-top: 120px;*/ /* some value needed if header bar is fixed */
     /* border: 5px solid green; */
@@ -36,14 +34,13 @@ a {
 a:link,
 a:visited {
     color: var(--rom-lightgrey);
-    color: var(--rom-grey);
 }
 a:hover, a:focus {
     color: var(--rom-blue);
     /*text-decoration: none;*/
 }
 a:active {
-    color: var(--rom-grey);
+    color: var(--rom-lightgrey);
     /*background-color: var(--rom-blue);*/
 }
 
