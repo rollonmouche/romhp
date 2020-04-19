@@ -3,10 +3,10 @@
 Download or clone the following repositories and place them parallel to this
 folder:
 
-https://github.com/necolas/normalize.css.git
-https://github.com/theleagueof/league-spartan/archive/master.zip
-https://github.com/theleagueof/league-spartan.git
-https://github.com/leemark/better-simple-slideshow.git
+https://github.com/necolas/normalize.css.git  
+https://github.com/theleagueof/league-spartan/archive/master.zip  
+https://github.com/theleagueof/league-spartan.git  
+https://github.com/leemark/better-simple-slideshow.git  
 
 
 # Automatic page creation
@@ -25,7 +25,7 @@ Either open `index.html`
 
 or:
 
-`cd path/to/this/directory/../`
+`cd path/to/this/directory/../`  
 `python3 -m http.server`
 
 and open:
