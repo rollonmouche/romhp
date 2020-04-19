@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Roll on Mouche</title>
+    <meta name="description" content="Bluesrock à la Roll on Mouche">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="img/favicon.jpg" rel="shortcut icon">
+    <!-- for swipe support on touch interfaces: -->
+    <script src="../better-simple-slideshow/demo/js/hammer.min.js"></script>
+    <script src="../better-simple-slideshow/js/better-simple-slideshow.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- header only displayed on mobile screens: -->
+        <header class="mobile_header">
+            <a id="rom_burger" href="#navi_area">
+                <img id="rom_burger_img"
+                    src="img/rom_burger.png"
+                    alt="Menu">
+            </a>
+            <img id="logo_img_mobile"
+                src="img/headerlogo.png"
+                alt="Roll on Mouche">
+        </header>
+        
+        <!-- navigation bar or mobile menu -->
+        <nav id="navi_area">
+            <a id="logo" href="index.html" tabindex="1">
+                <img id="logo_img"
+                    src="img/headerlogo.png"
+                    alt="Roll on Mouche">
+            </a>
+            <div class="menucontainer">
+                <a class="noactive burgeronly" href="index.html">Home</a>
+                <a class="noactive" href="live.html">Live</a>
+                <a class="noactive" href="media.html">Media</a>
+                <a class="noactive" href="booking.html">Booking</a>
+                <a class="noactive burgeronly" href="imprint.html">Impressum</a>
+                <a class="noactive burgeronly menuexit" href="#wrapper" style="font-size: 150%">&times;</a>
+            </div>
+        </nav>
+        
+        <main id="content_area">
+            <!-- #include:page_content -->
+        </main>
+
+        <footer class="footer">
+            <div class="socialmedia">
+                <a href="https://de-de.facebook.com/Roll.on.Mouche" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/channel/UCYA3xRX_ZTZ-mnjr1jv0f7A" target="_blank" class="fa fa-youtube-play"></a>
+                <a href="https://soundcloud.com/roll-on-mouche" target="_blank" class="fa fa-soundcloud"></a>
+                <a href="#" target="_blank" class="fa fa-spotify"></a>
+                <!--
+                <a href="#" target="_blank" class="fa fa-google"></a>
+                <a href="#" target="_blank" class="fa fa-apple"></a>
+                -->
+            </div>
+            <div class="imprint">
+                <a href="imprint.html">Impressum</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

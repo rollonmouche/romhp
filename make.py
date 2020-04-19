@@ -3,17 +3,19 @@ defined markers with defined html code. In a created file 'child.html', the
 included html code is taken from 'child_content.html'.
 """
 
-BASE_FILE = 'index.html'
+BASE_FILE = 'template.html'
 PAGES = [
+    'index',
     'live',
     'media',
     'booking',
     'imprint',
 ]
-INCLUDEMARKER_BEGIN = '<!-- #include-html-begin -->'
-INCLUDEMARKER_END = '<!-- #include-html-end -->'
+INCLUDEMARKER = '<!-- #include:page_content -->'
+GIGTABLE_MARKER = '<!-- #include:gigtable -->'
+
 PAGEFILE_PATTERN = '{}.html'  # format with PAGES[n]
-INCLUDEFILE_PATTERN = '{}_content.html'  # format with PAGES[n]
+CONTENTFILE_PATTERN = '{}_content.html'  # format with PAGES[n]
 
 ACTIVE_CLASS = 'active'
 NOACTIVE_CLASS = 'noactive'
@@ -23,7 +25,8 @@ GIGFILE_DONE = 'gigs_done.txt'
 UPCOMING_TITLE = 'Upcoming'
 DONE_TITLE = 'Done'
 NOGIGS = 'No upcoming shows'
-GIG_TABLE_HTML_FILE = INCLUDEFILE_PATTERN.format('live')
+
+
 
 
 def get_file_content(filename):
@@ -32,8 +35,8 @@ def get_file_content(filename):
     return content
 
 
-def include_html(infile, outfile, includefile, begin_marker, end_marker):
-    """Include an html snippet into another html file.
+def include_snippet(infile, outfile, snippet, marker):
+    """Include a snippet into a file at marked place.
 
     Parameters:
     -----------
@@ -41,22 +44,16 @@ def include_html(infile, outfile, includefile, begin_marker, end_marker):
         Name of file into which snippet shall be included
     outfile : str
         Name of new created file with included snippet
-    includefile : str
-        Name of file containing snippet to be included
-    begin_marker : str
-        Marker indicating begin of include
-    end_marker : str
-        Marker indicating end of include
+    snippet : str
+        Snippet to be included
+    marker : str
+        Text to be replaced by snippet
     """
     source_data = get_file_content(infile)
-    idx_begin = source_data.find(begin_marker)
-    idx_end = source_data.find(end_marker, idx_begin) + len(end_marker)
+    idx_begin = source_data.find(marker)
     indent_len = idx_begin - source_data.rfind('\n', 0, idx_begin) - 1
-    indent = ' '*indent_len
-    text_to_replace = source_data[idx_begin:idx_end]
-    content = get_file_content(includefile)
-    content = content.replace('\n', '\n' + indent)
-    outdata = source_data.replace(text_to_replace, content)
+    snippet = snippet.replace('\n', '\n' + ' '*indent_len)
+    outdata = source_data.replace(marker, snippet)
     with open(outfile, 'w') as ofile:
         ofile.write(outdata)
 
@@ -64,16 +61,16 @@ def include_html(infile, outfile, includefile, begin_marker, end_marker):
 def make_pages(
     pages=PAGES,
     basefile=BASE_FILE,
-    begin_marker=INCLUDEMARKER_BEGIN,
-    end_marker=INCLUDEMARKER_END,
+    marker=INCLUDEMARKER,
     pagefile_pattern=PAGEFILE_PATTERN,
-    includefile_pattern=INCLUDEFILE_PATTERN,
+    includefile_pattern=CONTENTFILE_PATTERN,
 ):
     print('make pages …')
     for page in pages:
         outfile = pagefile_pattern.format(page)
         includefile = includefile_pattern.format(page)
-        include_html(basefile, outfile, includefile, begin_marker, end_marker)
+        snippet = get_file_content(includefile)
+        include_snippet(basefile, outfile, snippet, marker)
         
 
 def set_active_class(
@@ -92,8 +89,6 @@ def set_active_class(
             for line in lines:
                 if noactive_class in line and page in line:
                     line = line.replace(noactive_class, active_class)
-                elif active_class in line and 'index' in line:
-                    line = line.replace(active_class, noactive_class)
                 file.write(line + '\n')
 
 
@@ -218,7 +213,11 @@ def main():
         title=DONE_TITLE,
         set_hyperlink=False,
     )
-    write_gig_tables_html([upcoming_table, done_table], GIG_TABLE_HTML_FILE)
+    gigtable_file = CONTENTFILE_PATTERN.format('live')
+    write_gig_tables_html([upcoming_table, done_table], gigtable_file)
+
+    index_file = CONTENTFILE_PATTERN.format('index')
+    include_snippet(index_file, index_file, upcoming_table, GIGTABLE_MARKER)
 
     make_pages()
     set_active_class()
