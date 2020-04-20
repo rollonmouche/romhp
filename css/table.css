@@ -3,12 +3,10 @@ table {
     margin: 1em auto;
     margin-bottom: 3em;
     width: 100%;
-    /* width: auto; */
     border-collapse: collapse;
     border-top: 4px solid var(--rom-blue);
 }
 caption {
-    /* display: none; */
     font-size: 150%;
     padding-top: 0em;
     padding-bottom: 0.4em;
@@ -18,7 +16,6 @@ td {
     padding: 0.8em 0.8em 0.4em 0.8em;
     line-height: 1.4em;
 }
-
 th, td {
     vertical-align: top;
 }
@@ -33,9 +30,26 @@ td p.venueadd {
     font-weight: 200;
     font-size: 120%;
 }
+table.gigs_home {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: none;
+}
+table.gigs_home caption {
+    text-align: left;
+    /* display: none; */
+}
+table.gigs_home td {
+    padding-left: 0;
+    /* padding-right: 0em; */
+    /* line-height: 1em; */
+}
+table.gigs_home td.gigdate {
+    text-align: left;
+}
 
 @media only screen and (max-width: 600px) {
-  
+
 th, td {
     display: block;
     padding: 0.2em 0.4em;
@@ -50,5 +64,16 @@ td.venue {
 }
 td p.venueadd {
     padding-bottom: 0.2em;
+}
+
+table.gigs_home {
+    border-top: 0px solid var(--rom-blue);
+}
+table.gigs_home caption {
+    text-align: center;
+}
+table.gigs_home td.venue {
+    border-bottom: 0px solid var(--rom-blue);
+    padding-bottom: 0.5em;
 }
 }

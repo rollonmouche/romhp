@@ -12,7 +12,7 @@ body {
     color: var(--rom-lightgrey);
     font-family: 'League Spartan Bold';
     font-weight: bold;
-    font-size: 145%;
+    font-size: 130%;
     line-height: 1.6;
     /* border: 1px solid var(--rom-orange); */
 }

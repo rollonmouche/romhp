@@ -22,7 +22,7 @@ NOACTIVE_CLASS = 'noactive'
 
 GIGFILE_UPCOMING = 'gigs_upcoming.txt'
 GIGFILE_DONE = 'gigs_done.txt'
-UPCOMING_TITLE = 'Upcoming'
+UPCOMING_TITLE = 'Upcoming shows'
 DONE_TITLE = 'Done'
 NOGIGS = 'No upcoming shows'
 
@@ -169,7 +169,13 @@ def gig2html(gig, set_hyperlink=True):
     return '\n'.join(html_lines)
 
 
-def create_gig_table(gigfile, title, set_hyperlink, alt=NOGIGS):
+def create_gig_table(
+    gigfile,
+    title,
+    set_hyperlink=True,
+    alt=NOGIGS,
+    css_class=None,
+):
     keys = ['date', 'venue', 'url', 'add']
     gigs = load_gigs(gigfile, keys)
     if gigs:
@@ -178,9 +184,9 @@ def create_gig_table(gigfile, title, set_hyperlink, alt=NOGIGS):
             gigs_html += [gig2html(gig, set_hyperlink=set_hyperlink)]
     else:
         gigs_html = ['<tr><td style="text-align: center">{}</td></tr>'.format(alt)]
-    
+    class_str = 'class="{}"'.format(css_class) if css_class else ''
     html_lines = [
-        '<table role="table" aria-label="{}">'.format(title),
+        '<table {} role="table" aria-label="{}">'.format(class_str, title),
         '    <caption>{}</caption>'.format(title),
         '    <tbody>',
         *gigs_html,
@@ -213,12 +219,18 @@ def main():
         title=DONE_TITLE,
         set_hyperlink=False,
     )
+    upcoming_table_home = create_gig_table(
+        gigfile=GIGFILE_UPCOMING,
+        title=UPCOMING_TITLE,
+        set_hyperlink=True,
+        css_class='gigs_home',
+    )
     gigtable_file = CONTENTFILE_PATTERN.format('live')
     write_gig_tables_html([upcoming_table, done_table], gigtable_file)
 
     make_pages()
     index_file = PAGEFILE_PATTERN.format('index')
-    include_snippet(index_file, index_file, upcoming_table, GIGTABLE_MARKER)
+    include_snippet(index_file, index_file, upcoming_table_home, GIGTABLE_MARKER)
     
     set_active_class()
 
