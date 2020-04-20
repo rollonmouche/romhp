@@ -1,3 +1,22 @@
+#mei2020
+date: 8.4.2020
+venue: Meisenfrei, Bremen – FÄLLT AUS! –
+url: http://meisenfrei.de
+
+#pack2020
+date: 3.7.2020
+venue: Packhalle Open Air, Sögel
+url: http://www.packhalle-openair.de
+
+#mei2020
+date: 8.4.2020
+venue: Meisenfrei, Bremen – FÄLLT AUS! –
+url: http://meisenfrei.de
+
+#pack2020
+date: 3.7.2020
+venue: Packhalle Open Air, Sögel
+url: http://www.packhalle-openair.de
 
 #mei2020
 date: 8.4.2020

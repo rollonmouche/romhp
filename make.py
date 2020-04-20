@@ -216,10 +216,10 @@ def main():
     gigtable_file = CONTENTFILE_PATTERN.format('live')
     write_gig_tables_html([upcoming_table, done_table], gigtable_file)
 
-    index_file = CONTENTFILE_PATTERN.format('index')
-    include_snippet(index_file, index_file, upcoming_table, GIGTABLE_MARKER)
-
     make_pages()
+    index_file = PAGEFILE_PATTERN.format('index')
+    include_snippet(index_file, index_file, upcoming_table, GIGTABLE_MARKER)
+    
     set_active_class()
 
 
