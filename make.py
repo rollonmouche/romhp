@@ -3,7 +3,7 @@ defined markers with defined html code. In a created file 'child.html', the
 included html code is taken from 'child_content.html'.
 """
 
-BASE_FILE = 'template.html'
+BASE_FILE = '_template.html'
 PAGES = [
     'index',
     'live',
@@ -15,7 +15,7 @@ INCLUDEMARKER = '<!-- #include:page_content -->'
 GIGTABLE_MARKER = '<!-- #include:gigtable -->'
 
 PAGEFILE_PATTERN = '{}.html'  # format with PAGES[n]
-CONTENTFILE_PATTERN = '{}_content.html'  # format with PAGES[n]
+CONTENTFILE_PATTERN = '_{}.html'  # format with PAGES[n]
 
 ACTIVE_CLASS = 'active'
 NOACTIVE_CLASS = 'noactive'

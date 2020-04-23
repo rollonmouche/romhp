@@ -12,7 +12,7 @@ https://github.com/leemark/better-simple-slideshow.git
 # Automatic page creation
 
 The files `<pagename>.html` are created automatically using `make.py`.
-Only `template.html` and `<pagename>_content.html` are to be edited.
+Only files `_<pagename>.html` are to be edited.
 
 To create pages, run:
 
