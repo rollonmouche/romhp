@@ -1,4 +1,4 @@
 
-* <title> individually for pages, e.g.: "Roll on Mouche | Live"
+* adjust gig tables
 * load title logo only once if possible
 * Imprint: auch Bildnachweise, externe Repos

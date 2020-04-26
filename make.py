@@ -11,8 +11,15 @@ PAGES = [
     'booking',
     'imprint',
 ]
-INCLUDEMARKER = '<!-- #include:page_content -->'
+PAGETITLE_SUFFIXES = {
+    'live': 'Live',
+    'media': 'Media',
+    'booking': 'Booking',
+    'imprint': 'Impressum & Datenschutz',
+}
+INCLUDE_MARKER = '<!-- #include:page_content -->'
 GIGTABLE_MARKER = '<!-- #include:gigtable -->'
+PAGETITLE_MARKER = '<!-- #include:page_title -->'
 
 PAGEFILE_PATTERN = '{}.html'  # format with PAGES[n]
 CONTENTFILE_PATTERN = '_{}.html'  # format with PAGES[n]
@@ -61,7 +68,7 @@ def include_snippet(infile, outfile, snippet, marker):
 def make_pages(
     pages=PAGES,
     basefile=BASE_FILE,
-    marker=INCLUDEMARKER,
+    marker=INCLUDE_MARKER,
     pagefile_pattern=PAGEFILE_PATTERN,
     includefile_pattern=CONTENTFILE_PATTERN,
 ):
@@ -91,6 +98,22 @@ def set_active_class(
                     line = line.replace(noactive_class, active_class)
                 file.write(line + '\n')
 
+
+def include_page_titles(
+    pages=PAGES,
+    title_suffixes=PAGETITLE_SUFFIXES,
+    pagefile_pattern=PAGEFILE_PATTERN,
+    marker=PAGETITLE_MARKER,
+):
+    for page in pages:
+        suffix = title_suffixes.get(page)
+        if suffix:
+            snippet = ' | {}'.format(suffix)
+        else:
+            snippet = ''
+        filename = pagefile_pattern.format(page)
+        include_snippet(filename, filename, snippet, marker)
+        
 
 def load_gigs(filename, keys):
     """Return list if gig dicts.
@@ -235,6 +258,7 @@ def main():
     include_snippet(index_file, index_file, upcoming_table_home, GIGTABLE_MARKER)
     
     set_active_class()
+    include_page_titles()
 
 
 if __name__ == '__main__':
