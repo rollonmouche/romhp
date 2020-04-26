@@ -1,11 +1,25 @@
 @media screen {
 
+div.content {
+    /* padding: 20px var(--content-padding-lr); */
+    padding:
+        20px
+        calc(var(--content-padding-lr) - var(--article-margin))
+        10px
+        calc(var(--content-padding-lr) - var(--article-margin));
+    /*padding-bottom: 300px; /* for testing, to force scrolling */
+    /* border: 3px solid red; */
+}
+div.content h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
 section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 20px var(--content-padding-lr);
-    /* padding-bottom: 300px; */ /* for testing, to force scrolling */
+    margin: 0;
     /* border: 3px solid var(--rom-orange); */
 }
 article {
@@ -13,11 +27,8 @@ article {
     flex-basis: 350px;
     display: flex;
     flex-direction: column;
-    padding: 0px;
-    margin: 16px;
+    margin: var(--article-margin);
     border-bottom: 4px solid var(--rom-blue);
-    /* border-right: 4px solid var(--rom-blue); */
-    /* border-bottom-right-radius: 8px; */
 
 }
 div.tile_content {
@@ -31,14 +42,7 @@ div.youtube_container {
     padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     /* border: 2px solid green; */
 }
-div.soundcloud_container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 100%; /*  56.25%; */
-    /* border: 2px solid green; */
-}
-article iframe {
+div.youtube_container iframe {
     border: 0;
     position: absolute;
     top: 0;
@@ -49,6 +53,28 @@ article iframe {
     height: 100%;
     /* border: 2px solid yellow; */
 }
+div.album_container {
+    flex: 1;
+}
+img.album_cover {
+    width: 404;
+    height: auto;
+}
+p.release {
+    font-family: 'League Spartan';
+    font-weight: 200;
+    font-size: 120%;
+}
+div.soundcloud_container {
+    flex: 2;
+    width: 100%;
+}
+div.soundcloud_container iframe {
+    width: 100%;
+    /* height: 166; */
+    border: none;
+}
+
 div.more_button {
     overflow: hidden;
     /* background: var(--rom-orange); */
@@ -62,3 +88,17 @@ div.more_button {
 }
 
 } /* @media */
+
+/***************************** Mobile *****************************************/
+@media screen and (max-width: 600px) {
+
+img.album_cover {
+    width: 100%;
+    height: auto;
+}
+
+article.no_underline_mobile {
+    border-bottom: none;
+}
+
+}

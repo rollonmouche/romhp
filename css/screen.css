@@ -23,8 +23,8 @@ div#wrapper {
     /* border: 2px solid green; */
 }
 main#content_area {
-    padding: 0;
-    /*margin-top: 120px;*/ /* some value needed if header bar is fixed */
+    /* padding: 100; */
+    /* margin-top: 120px; */ /* some value needed if header bar is fixed */
     /* border: 5px solid green; */
 }
 

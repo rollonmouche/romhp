@@ -1,2 +1,5 @@
 
+* rm jpg etc from -gitignore
+* <title> individually for pages, e.g.: "Roll on Mouche | Live"
+* load title logo only once if possible
 * Imprint: auch Bildnachweise, externe Repos

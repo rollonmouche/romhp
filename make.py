@@ -198,9 +198,11 @@ def create_gig_table(
 
 def write_gig_tables_html(tables, outfile):
     html_lines = [
+        '<div class="content">',
         '<section>',
         *tables,
         '</section>',
+        '</div>',
         '',
     ]
     html = '\n'.join(html_lines)

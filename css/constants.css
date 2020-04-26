@@ -7,9 +7,9 @@
     --rom-darkgrey : #333333;
     --rom-orange : #E55741;
     
-    /*--content-padding-lr: 150px;*/
     --content-padding-lr: 8%;
     --navitem-padding-lr: 15px;
+    --article-margin: 20px;
     
     --mobile_logo_height: 24px;
     --mobile-header-height: 50px;
