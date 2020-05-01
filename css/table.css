@@ -12,20 +12,26 @@ caption {
     padding-bottom: 0.4em;
 }
 td {
-    /* border: 1px solid var(--rom-orange); */
     padding: 0.8em 0.8em 0.4em 0.8em;
     line-height: 1.4em;
+    /* border: 1px solid var(--rom-orange); */
 }
 th, td {
     vertical-align: top;
 }
-td.gigdate {
+td.tabkey {
     text-align: right;
 }
-td.venue {
+td.tabvalue {
     text-align: left;
 }
-td p.venueadd {
+table.gig_table td.tabkey {
+    width: 35%;
+}
+table.booking_table td.tabkey {
+    width: 50%;
+}
+td p.tabvalueadd {
     font-family: 'League Spartan';
     font-weight: 200;
     font-size: 120%;
@@ -44,7 +50,7 @@ table.gigs_home td {
     /* padding-right: 0em; */
     /* line-height: 1em; */
 }
-table.gigs_home td.gigdate {
+table.gigs_home td.tabkey {
     text-align: left;
 }
 
@@ -54,15 +60,15 @@ th, td {
     display: block;
     padding: 0.2em 0.4em;
 }
-td.gigdate{
+td.tabkey{
     text-align: left;
     padding-top: 0.5em;
 }
-td.venue {
+td.tabvalue {
     border-bottom: 4px solid var(--rom-blue);
     padding-bottom: 0.2em;
 }
-td p.venueadd {
+td p.tabvalueadd {
     padding-bottom: 0.2em;
 }
 
@@ -72,7 +78,7 @@ table.gigs_home {
 table.gigs_home caption {
     text-align: left;
 }
-table.gigs_home td.venue {
+table.gigs_home td.tabvalue {
     border-bottom: 0px solid var(--rom-blue);
     padding-bottom: 0.5em;
 }

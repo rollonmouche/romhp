@@ -171,14 +171,14 @@ def gig2html(gig, set_hyperlink=True):
     else:
         venue_html = '<p>{}</p>'.format(venue)
     if add:
-        add_html = '<p class="venueadd">{}</p>'.format(add)
+        add_html = '<p class="tabvalueadd">{}</p>'.format(add)
     else:
         add_html = ''
 
     html_lines = [
         '<tr>',
-        '    <td class="gigdate">{}</td>'.format(date),
-        '    <td class="venue">',
+        '    <td class="tabkey">{}</td>'.format(date),
+        '    <td class="tabvalue">',
         '        ' + venue_html,
         '        ' + add_html,
         '    </td>',
@@ -233,11 +233,13 @@ def main():
         gigfile=GIGFILE_UPCOMING,
         title=UPCOMING_TITLE,
         set_hyperlink=True,
+        css_class='gig_table',
     )
     done_table = create_gig_table(
         gigfile=GIGFILE_DONE,
         title=DONE_TITLE,
         set_hyperlink=False,
+        css_class='gig_table',
     )
     upcoming_table_home = create_gig_table(
         gigfile=GIGFILE_UPCOMING,
