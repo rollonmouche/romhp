@@ -1,4 +1,6 @@
 
 * adjust gig tables
-* load title logo only once if possible
+* Album on index page
+* fix photos, select subset
+* Booking page
 * Imprint: auch Bildnachweise, externe Repos
