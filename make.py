@@ -72,7 +72,6 @@ def make_pages(
     pagefile_pattern=PAGEFILE_PATTERN,
     includefile_pattern=CONTENTFILE_PATTERN,
 ):
-    print('make pages …')
     for page in pages:
         outfile = pagefile_pattern.format(page)
         includefile = includefile_pattern.format(page)
@@ -87,10 +86,8 @@ def set_active_class(
     pagefile_pattern=PAGEFILE_PATTERN,
 ):
     """Set active and noactive classes in all files."""
-    print('set active class …')
     for page in pages:
         filename = pagefile_pattern.format(page)
-        print(filename)
         lines = get_file_content(filename).split('\n')
         with open(filename, 'w') as file:
             for line in lines:
