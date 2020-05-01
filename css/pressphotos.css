@@ -1,0 +1,27 @@
+@media screen {
+
+section.press_photos {
+    margin: 20px 0;
+}
+
+div.gallery {
+    flex: 1;
+    margin: 7px;
+    flex-basis: 250px;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rom-blue);
+}
+div.gallery img:hover {
+    border: 1px solid var(--rom-lightgrey);
+}
+
+div.desc {
+    padding: 0px;
+    text-align: right;
+}
+    
+}
