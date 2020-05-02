@@ -1,6 +1,6 @@
 
-* adjust gig tables
 * Album on index page
 * fix photos, select subset
-* Booking page
+* Icons zu iTunes, Google, Amazon
 * Imprint: auch Bildnachweise, externe Repos
+* Booking: Logos zum Download

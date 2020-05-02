@@ -89,9 +89,9 @@ a#logo {
 }	
 
 nav {
-    height: 500px;
+    height: 600px;
     padding-top: 50px;
-    /*background: green;*/
+    /* background: green; */
     border-bottom: none;
     order: 1;
     -webkit-order: 1;
@@ -108,7 +108,8 @@ nav {
     display: block;
     width: 100%;
     height: auto;
-    /*background: var(--rom-orange);*/
+    padding-top: calc(var(--mobile-header-height) + 20px);
+    /* background: var(--rom-orange); */
 }
 .menucontainer a {
     display: block;
