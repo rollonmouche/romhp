@@ -1,5 +1,6 @@
 
 * Album on index page
-* Icons zu iTunes, Google, Amazon
+* Album: Links zu Plattformen
 * Imprint: auch Bildnachweise, externe Repos
 * Booking: Logos zum Download
+* check Abstände auf einem 4k-Gerät, ggf. px durch andere Einheit ersetzen

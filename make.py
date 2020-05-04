@@ -1,6 +1,6 @@
-"""Create pages by copying the index.html and replacing all content between two
-defined markers with defined html code. In a created file 'child.html', the
-included html code is taken from 'child_content.html'.
+"""Create pages by copying the _template.html and inserting content at defined
+markers. In a created file 'page.html', the included html code is taken from
+'_page.html'.
 """
 
 BASE_FILE = '_template.html'
@@ -32,8 +32,6 @@ GIGFILE_DONE = 'gigs_done.txt'
 UPCOMING_TITLE = 'Upcoming shows'
 DONE_TITLE = 'Done'
 NOGIGS = 'No upcoming shows'
-
-
 
 
 def get_file_content(filename):
