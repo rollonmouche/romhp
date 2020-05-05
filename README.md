@@ -1,7 +1,7 @@
 # External resources
 
-Download or clone the following repositories and place them parallel to this
-folder:
+Download or clone the following repositories and place them into the folder
+`external`:
 
 https://github.com/necolas/normalize.css.git  
 https://github.com/theleagueof/league-spartan/archive/master.zip  

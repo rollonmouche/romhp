@@ -1,59 +1,59 @@
 /* This is the better looking bold weight, which should be the default */
 @font-face {
     font-family: 'League Spartan Bold';
-    src: url('../../league-spartan-master/_webfonts/leaguespartan-bold.eot');
-    src: url('../../league-spartan-master/_webfonts/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
-         url('../../league-spartan-master/_webfonts/leaguespartan-bold.woff2') format('woff2'),
-         url('../../league-spartan-master/_webfonts/leaguespartan-bold.woff') format('woff'),
-         url('../../league-spartan-master/_webfonts/leaguespartan-bold.ttf') format('truetype'),
-         url('../../league-spartan-master/_webfonts/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    src: url('../external/league-spartan-master/_webfonts/leaguespartan-bold.eot');
+    src: url('../external/league-spartan-master/_webfonts/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('../external/league-spartan-master/_webfonts/leaguespartan-bold.woff2') format('woff2'),
+         url('../external/league-spartan-master/_webfonts/leaguespartan-bold.woff') format('woff'),
+         url('../external/league-spartan-master/_webfonts/leaguespartan-bold.ttf') format('truetype'),
+         url('../external/league-spartan-master/_webfonts/leaguespartan-bold.svg#league_spartanbold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 /* seems to not work this way: (https://github.com/theleagueof/league-spartan) */
 /* @font-face {
     font-family: 'League Spartan Variable';
-    src: url('../../league-spartan/fonts/variable/LeagueSpartanVariable.woff2') format('woff2-variations');
+    src: url('../external/league-spartan/fonts/variable/LeagueSpartanVariable.woff2') format('woff2-variations');
     font-weight: 200 900;
 } */
 
 @font-face {
     font-family: 'League Spartan';
-    src: url('../../league-spartan/fonts/web/woff2/LeagueSpartan-Extralight.woff2') format('woff2'),
-         url('../../league-spartan/fonts/web/woff/LeagueSpartan-Extralight.woff') format('woff'),
-         url('../../league-spartan/fonts/static/ttf/LeagueSpartan-Extralight.ttf') format('truetype');
+    src: url('../external/league-spartan/fonts/web/woff2/LeagueSpartan-Extralight.woff2') format('woff2'),
+         url('../external/league-spartan/fonts/web/woff/LeagueSpartan-Extralight.woff') format('woff'),
+         url('../external/league-spartan/fonts/static/ttf/LeagueSpartan-Extralight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 @font-face {
     font-family: 'League Spartan';
-    src: url('../../league-spartan/fonts/web/woff2/LeagueSpartan-Light.woff2') format('woff2'),
-         url('../../league-spartan/fonts/web/woff/LeagueSpartan-Light.woff') format('woff'),
-         url('../../league-spartan/fonts/static/ttf/LeagueSpartan-Light.ttf') format('truetype');
+    src: url('../external/league-spartan/fonts/web/woff2/LeagueSpartan-Light.woff2') format('woff2'),
+         url('../external/league-spartan/fonts/web/woff/LeagueSpartan-Light.woff') format('woff'),
+         url('../external/league-spartan/fonts/static/ttf/LeagueSpartan-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'League Spartan';
-    src: url('../../league-spartan/fonts/web/woff2/LeagueSpartan-Regular.woff2') format('woff2'),
-         url('../../league-spartan/fonts/web/woff/LeagueSpartan-Regular.woff') format('woff'),
-         url('../../league-spartan/fonts/static/ttf/LeagueSpartan-Regular.ttf') format('truetype');
+    src: url('../external/league-spartan/fonts/web/woff2/LeagueSpartan-Regular.woff2') format('woff2'),
+         url('../external/league-spartan/fonts/web/woff/LeagueSpartan-Regular.woff') format('woff'),
+         url('../external/league-spartan/fonts/static/ttf/LeagueSpartan-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'League Spartan';
-    src: url('../../league-spartan/fonts/web/woff2/LeagueSpartan-Medium.woff2') format('woff2'),
-         url('../../league-spartan/fonts/web/woff/LeagueSpartan-Medium.woff') format('woff'),
-         url('../../league-spartan/fonts/static/ttf/LeagueSpartan-Medium.ttf') format('truetype');
+    src: url('../external/league-spartan/fonts/web/woff2/LeagueSpartan-Medium.woff2') format('woff2'),
+         url('../external/league-spartan/fonts/web/woff/LeagueSpartan-Medium.woff') format('woff'),
+         url('../external/league-spartan/fonts/static/ttf/LeagueSpartan-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
     font-family: 'League Spartan';
-    src: url('../../league-spartan/fonts/web/woff2/LeagueSpartan-Semibold.woff2') format('woff2'),
-         url('../../league-spartan/fonts/web/woff/LeagueSpartan-Semibold.woff') format('woff'),
-         url('../../league-spartan/fonts/static/ttf/LeagueSpartan-Semibold.ttf') format('truetype');
+    src: url('../external/league-spartan/fonts/web/woff2/LeagueSpartan-Semibold.woff2') format('woff2'),
+         url('../external/league-spartan/fonts/web/woff/LeagueSpartan-Semibold.woff') format('woff'),
+         url('../external/league-spartan/fonts/static/ttf/LeagueSpartan-Semibold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
