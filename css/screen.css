@@ -1,6 +1,7 @@
 @media screen {
 
 html {
+    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 body {
