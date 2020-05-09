@@ -101,9 +101,6 @@ nav {
     order: 2;
     -webkit-order: 2;
 }
-.footer div.imprint {
-    display: none;
-}
 .menucontainer {
     display: block;
     width: 100%;

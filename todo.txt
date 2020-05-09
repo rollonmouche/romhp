@@ -4,3 +4,5 @@
 * Imprint: auch Bildnachweise, externe Repos
 * Booking: Logos zum Download
 * check Abstände auf einem 4k-Gerät, ggf. px durch andere Einheit ersetzen
+* Pressefotos umbenennen
+* Mobile Navigation: Bildschirmhöhe berücksichtigen
