@@ -57,8 +57,11 @@ div.album_container {
     flex: 1;
 }
 img.album_cover {
-    width: 404;
-    height: auto;
+    /* width: 404; */
+    /* width: 200; */
+    /* height: auto; */
+    width: 50%;
+    margin: 0 auto;
 }
 p.release {
     font-family: 'League Spartan';
@@ -85,6 +88,16 @@ div.more_button {
 .more_button a {
     float: right;
     padding: 0.5em 0.5em 0.1em 0.5em;
+}
+.description p {
+    font-family: 'League Spartan';
+    font-weight: 400;
+    font-size: 120%;
+    line-height: 1.2;
+    padding-bottom: 0.5em;
+}
+a.streaming_link {
+    padding: 0 0.4em;
 }
 
 } /* @media */
