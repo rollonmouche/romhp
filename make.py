@@ -29,9 +29,9 @@ NOACTIVE_CLASS = 'noactive'
 
 GIGFILE_UPCOMING = 'gigs_upcoming.txt'
 GIGFILE_DONE = 'gigs_done.txt'
-UPCOMING_TITLE = 'Upcoming shows'
-DONE_TITLE = 'Done'
-NOGIGS = 'No upcoming shows'
+UPCOMING_TITLE = 'Kommende Shows'
+DONE_TITLE = 'Vergangene Shows'
+NOGIGS = 'momentan keine'
 
 
 def get_file_content(filename):
