@@ -57,10 +57,8 @@ div.album_container {
     flex: 1;
 }
 img.album_cover {
-    /* width: 404; */
-    /* width: 200; */
-    /* height: auto; */
     width: 100%;
+    height: auto;
     margin: 0 auto;
     border: 1px solid var(--rom-grey);
 }
@@ -105,11 +103,6 @@ a.streaming_link {
 
 /***************************** Mobile *****************************************/
 @media screen and (max-width: 600px) {
-
-img.album_cover {
-    width: 100%;
-    height: auto;
-}
 
 article.no_underline_mobile {
     border-bottom: none;

@@ -1,8 +1,8 @@
 
+* deployment script using rsync on gvfs?
+* Neuer Ansatz Mobile Navigation
+* Pressefotos umbenennen
 * Album on index page
-* Album: Links zu Plattformen
-* Imprint: auch Bildnachweise, externe Repos
 * Booking: Logos zum Download
 * check Abstände auf einem 4k-Gerät, ggf. px durch andere Einheit ersetzen
-* Pressefotos umbenennen
-* Mobile Navigation: Bildschirmhöhe berücksichtigen
+* make a funny 404 page
