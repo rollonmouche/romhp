@@ -1,8 +1,0 @@
-
-* deployment script using rsync on gvfs?
-* Neuer Ansatz Mobile Navigation
-* Pressefotos umbenennen
-* Album on index page
-* Booking: Logos zum Download
-* check Abstände auf einem 4k-Gerät, ggf. px durch andere Einheit ersetzen
-* make a funny 404 page
