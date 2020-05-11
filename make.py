@@ -3,7 +3,7 @@ markers. In a created file 'page.html', the included html code is taken from
 '_page.html'.
 """
 
-BASE_FILE = '_template.html'
+BASE_FILE = 'html/_template.html'
 PAGES = [
     'index',
     'live',
@@ -22,13 +22,13 @@ GIGTABLE_MARKER = '<!-- #include:gigtable -->'
 PAGETITLE_MARKER = '<!-- #include:page_title -->'
 
 PAGEFILE_PATTERN = '{}.html'  # format with PAGES[n]
-CONTENTFILE_PATTERN = '_{}.html'  # format with PAGES[n]
+CONTENTFILE_PATTERN = 'html/_{}.html'  # format with PAGES[n]
 
 ACTIVE_CLASS = 'active'
 NOACTIVE_CLASS = 'noactive'
 
-GIGFILE_UPCOMING = 'gigs_upcoming.txt'
-GIGFILE_DONE = 'gigs_done.txt'
+GIGFILE_UPCOMING = 'data/gigs_upcoming.txt'
+GIGFILE_DONE = 'data/gigs_done.txt'
 UPCOMING_TITLE = 'Kommende Shows'
 DONE_TITLE = 'Vergangene Shows'
 NOGIGS = 'momentan keine'
