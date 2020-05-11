@@ -1,8 +1,8 @@
 #mei2020
-_date: 08.04.2020
-_venue: Meisenfrei, Bremen
-_url: http://meisenfrei.de
-_add: – FÄLLT AUS! –
+date: 08.04.2020
+venue: Meisenfrei, Bremen
+url: http://meisenfrei.de
+add: – FÄLLT AUS! –
 
 #kulturboerse
 date: 18.02.2020
