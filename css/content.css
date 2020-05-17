@@ -99,6 +99,14 @@ a.streaming_link {
     padding: 0 0.4em;
 }
 
+div.error {
+    height: 500px;
+}
+div.error p {
+    text-align: center;
+    padding-top: 2em;
+}
+
 } /* @media */
 
 /***************************** Mobile *****************************************/

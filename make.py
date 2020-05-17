@@ -10,6 +10,7 @@ PAGES = [
     'media',
     'booking',
     'imprint',
+    '404',
 ]
 PAGETITLE_SUFFIXES = {
     'live': 'Live',
