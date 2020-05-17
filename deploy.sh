@@ -68,6 +68,7 @@ gvfs-mount $SERVER_URL
 echo "Start sync …"
 rsync \
     -avs \
+    --no-t \
     --update \
     --delete \
     --progress \
