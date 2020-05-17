@@ -28,8 +28,8 @@ CONTENTFILE_PATTERN = '_{}.html'  # format with PAGES[n]
 ACTIVE_CLASS = 'active'
 NOACTIVE_CLASS = 'noactive'
 
-GIGFILE_UPCOMING = 'data/gigs_upcoming.txt'
-GIGFILE_DONE = 'data/gigs_done.txt'
+GIGFILE_UPCOMING = 'gigs_upcoming.txt'
+GIGFILE_DONE = 'gigs_done.txt'
 UPCOMING_TITLE = 'Kommende Shows'
 DONE_TITLE = 'Vergangene Shows'
 NOGIGS = 'momentan keine'
