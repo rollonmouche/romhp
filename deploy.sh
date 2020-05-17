@@ -15,8 +15,8 @@
 # OPTIONS:
 #   -n, --dry-run
 #       Dry-run the rsync task to see what will be done.
-#   -u, --umount
-#       Automatically unmount when the work is done.
+#   -m, --keep-mounted
+#       Do not unmount when the work is done.
 #   -d, --dest
 #       Custom destination path.
 
@@ -29,8 +29,8 @@ do
     key="$1"
 
     case $key in
-        -u|--umount)
-        UMOUNT=YES
+        -m|--keep-mounted)
+        KEEPMOUNT=YES
         shift # past argument
         ;;
         -n|--dry-run)
@@ -90,9 +90,12 @@ rsync \
     $SRC_PATH \
     $DEST_PATH
 
-if [ ! -z $UMOUNT ]; then
+if [ -z $KEEPMOUNT ]; then
     echo "Unmount FTP server …"
     gvfs-mount -u $SERVER_URL
+    echo "Done."
+else
+    echo "Done."
+    echo "Server still mounted. Unmount with"
+    echo "gvfs-mount -u $SERVER_URL"
 fi
-
-echo "Done."
