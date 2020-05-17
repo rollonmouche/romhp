@@ -67,12 +67,9 @@ gvfs-mount $SERVER_URL
 
 echo "Start sync …"
 rsync \
-    -avs \
-    --no-t \
+    --recursive \
     --update \
     --delete \
-    --progress \
-    --stats \
     --exclude .git \
     --exclude error \
     --exclude stats \
@@ -80,6 +77,9 @@ rsync \
     --exclude deploy.sh \
     --temp-dir=$TMP_DIR \
     $DRY \
+    --verbose \
+    --progress \
+    --stats \
     $SRC_PATH \
     $DEST_PATH
 
