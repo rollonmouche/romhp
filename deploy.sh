@@ -17,6 +17,8 @@
 #       Dry-run the rsync task to see what will be done.
 #   -u, --umount
 #       Automatically unmount when the work is done.
+#   -d, --dest
+#       Custom destination path.
 
 # -----------------------------------------------------------------------------
 # argument checking ( https://stackoverflow.com/questions/192249/ )
@@ -34,6 +36,11 @@ do
         -n|--dry-run)
         DRYRUN=YES
         shift # past argument
+        ;;
+        -d|--dest)
+        DEST_PATH="$2"
+        shift # past argument
+        shift # past value
         ;;
         *)    # unknown option
         POSITIONAL+=("$1") # save it in an array for later
@@ -53,7 +60,7 @@ DRY="--dry-run"
 # -----------------------------------------------------------------------------
 FTPSERVER="web10.greensta.de"  # no trailing "/"
 FTPUSER=`cat ../username.txt`
-DEST_PATH="/run/user/1000/gvfs/ftp:host=$FTPSERVER,user=$FTPUSER/web"
+[ -z $DEST_PATH ] && DEST_PATH="/run/user/1000/gvfs/ftp:host=$FTPSERVER,user=$FTPUSER/web"
 TMP_DIR="$SRC_PATH.rsync_tmp"
 SERVER_URL="ftp://$FTPUSER@$FTPSERVER"
 
