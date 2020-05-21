@@ -16,7 +16,7 @@ div.gallery img {
     border: 1px solid var(--rom-blue);
 }
 div.gallery img:hover {
-    border: 1px solid var(--rom-lightgrey);
+    border: 1px solid var(--rom-gold);
 }
 
 div.desc {

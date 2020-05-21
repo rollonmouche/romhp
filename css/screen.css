@@ -23,26 +23,25 @@ div#wrapper {
     margin: 0 auto;
     /* border: 2px solid green; */
 }
-main#content_area {
+/* main#content_area { */
     /* padding: 100; */
     /* margin-top: 120px; */ /* some value needed if header bar is fixed */
     /* border: 5px solid green; */
-}
+/* } */
 
 a {
     text-decoration: none;
 }
 a:link,
 a:visited {
-    color: var(--rom-grey);
+    color: var(--rom-gold);
 }
-a:hover, a:focus {
+a:hover {
     color: var(--rom-blue);
-    /*text-decoration: none;*/
 }
-a:active {
-    color: var(--rom-grey);
-    /*background-color: var(--rom-blue);*/
+a:active, a:focus {
+    color: var(--rom-gold);
+    text-shadow: 0.1em 0 0 var(--rom-blue);
 }
 
 

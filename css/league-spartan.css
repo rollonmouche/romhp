@@ -44,7 +44,6 @@
     font-weight: 400;
     font-style: normal;
 }
-/*
 @font-face {
     font-family: 'League Spartan';
     src: url('../external/league-spartan/fonts/web/woff2/LeagueSpartan-Medium.woff2') format('woff2'),
@@ -53,6 +52,7 @@
     font-weight: 500;
     font-style: normal;
 }
+/*
 @font-face {
     font-family: 'League Spartan';
     src: url('../external/league-spartan/fonts/web/woff2/LeagueSpartan-Semibold.woff2') format('woff2'),

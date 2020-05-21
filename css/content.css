@@ -96,7 +96,11 @@ div.more_button {
     padding-bottom: 0.5em;
 }
 a.streaming_link {
+    color: var(--rom-lightgrey);
     padding: 0 0.4em;
+}
+.content a {
+    font-weight: 500;
 }
 
 div.error {
