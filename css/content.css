@@ -20,6 +20,9 @@ section {
     margin: 0;
     /* border: 3px solid var(--rom-orange); */
 }
+div.nightowl {
+    border: 3px solid var(--rom-orange);
+}
 article {
     flex: 1;
     flex-basis: 350px;
@@ -60,10 +63,15 @@ img.album_cover {
     margin: 0 auto;
     border: 1px solid var(--rom-grey);
 }
-p.release {
+div.normal_text p {
     font-family: 'League Spartan';
     font-weight: 400;
     font-size: 120%;
+    line-height: 1.2;
+    padding-bottom: 0.5em;
+}
+p.centeralign {
+    text-align: center;
 }
 div.soundcloud_container {
     flex: 1;
@@ -82,13 +90,6 @@ div.more_button {
 .more_button a {
     float: right;
     padding: 0.5em 0.5em 0.1em 0.5em;
-}
-.description p {
-    font-family: 'League Spartan';
-    font-weight: 400;
-    font-size: 120%;
-    line-height: 1.2;
-    padding-bottom: 0.5em;
 }
 a.streaming_link {
     color: var(--rom-lightgrey);
