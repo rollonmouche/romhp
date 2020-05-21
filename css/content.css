@@ -1,13 +1,11 @@
 @media screen {
 
 div.content {
-    /* padding: 20px var(--content-padding-lr); */
     padding:
         20px
         calc(var(--content-padding-lr) - var(--article-margin))
         10px
         calc(var(--content-padding-lr) - var(--article-margin));
-    /*padding-bottom: 300px; /* for testing, to force scrolling */
     /* border: 3px solid red; */
 }
 div.content h2 {
@@ -79,9 +77,6 @@ div.soundcloud_container iframe {
 
 div.more_button {
     overflow: hidden;
-    /* background: var(--rom-orange); */
-    /* padding: 4px 4px 4px 4px; */
-    /* margin-top: 0px; */
     /* border: 1px solid yellow; */
 }
 .more_button a {

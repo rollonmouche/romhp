@@ -7,7 +7,6 @@ html {
 body {
     overflow-x: hidden;
     background-color: var(--rom-darkgrey);
-    /*background-image: url(../img/muster.png);*/
     background-repeat: repeat;
     background-attachment: fixed; /* fixed, scroll */
     color: var(--rom-lightgrey);
@@ -43,35 +42,5 @@ a:active, a:focus {
     color: var(--rom-gold);
     text-shadow: 0.1em 0 0 var(--rom-blue);
 }
-
-
-/* *****************************
- * Stuff
- * ***************************** */
-/*
-.floatleft {
-    float:left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-.floatright {
-    float:right;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-.clearing { clear: both; }
-*/
-
-/* Micro-clearfix-Hack */
-/*
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-.cf:after {
-    clear: both;
-}
-*/
 
 } /* @media */
