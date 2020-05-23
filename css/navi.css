@@ -40,6 +40,9 @@ nav a#logo {
     padding-top: 6px;
     padding-right: 0;
 }
+nav a#logo:hover {
+    background: var(--rom-red);
+}
 #logo_img {
     height: 65px;
     width: auto;
