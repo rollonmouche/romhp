@@ -13,10 +13,10 @@ div.gallery {
 div.gallery img {
     width: 100%;
     height: auto;
-    border: 1px solid var(--rom-blue);
+    border: 1px solid var(--rom-gold);
 }
 div.gallery img:hover {
-    border: 1px solid var(--rom-gold);
+    border: 1px solid var(--rom-blue);
 }
 
 div.desc {
