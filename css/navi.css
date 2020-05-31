@@ -5,10 +5,11 @@ nav {
     overflow: hidden;
     background: var(--rom-red);
     padding:
-        20px
+        25px
         calc(var(--content-padding-lr) - var(--navitem-padding-lr))
-        10px
+        20px
         calc(var(--content-padding-lr) - var(--navitem-padding-lr));
+    margin: 0;
     margin: 0;
     border-bottom: solid 6px var(--rom-blue);
     /* if position is fixed, width refers to viewport, else to parent element */
@@ -18,71 +19,81 @@ nav {
     width: 100%;
     */
 }
-nav a {
+/* nav a { border: 1px solid gainsboro; } */
+nav a.logobutton {
+    height: var(--logo-height);
+    width: auto;
+    /* border: 1px solid red; */
+}
+nav a.logobutton:hover {
+    background: none;
+}
+nav a#rom_logo {
+    display: block;
+    float: left;
+    padding: 0;
+}
+img.logo_img {
+    height: 100%;
+    width: auto;
+}
+.menucontainer {
+    float: right;
+    height: var(--logo-height);
+    /* border: 1px solid green; */
+}
+.menucontainer a {
     float: left;
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
     padding: 3px var(--navitem-padding-lr) 0 var(--navitem-padding-lr);
+    margin-top: 40px; /* approx. alignment with logo */
 }
-nav a:link,
-nav a:visited {
+.menucontainer a:link,
+.menucontainer a:visited {
     color: var(--rom-lightgrey);
 }
-nav a:hover {
+.menucontainer a:hover {
     background: var(--rom-blue);
     color: var(--rom-lightgrey);
 }
-nav a.active {
+.menucontainer a.active {
     background: var(--rom-blue);
-}
-nav a.logobutton:hover {
-    background: none;
-}
-nav a.logo {
-    padding-top: 6px;
-    padding-right: 0;
-}
-img.logo_img {
-    height: 65px;
-    width: auto;
-}
-.menucontainer {
-    float: right;
-    /* border: 1px solid green; */
-}
-.menucontainer a {
-    margin-top: 45px; /* approx. alignment with logo */
 }
 .mobileonly {
     display: none;
 }
 
 /*********************** Tablet or tiled window *******************************/
-@media screen and (max-width: 1150px) and (min-width: 601px){
+@media screen and (max-width: 1140px) and (min-width: 551px){
 
-.menucontainer {
-    display: block;
-}
-.menucontainer a {
-    margin-top: 10px;
+nav {
+    padding-bottom: 10px;
 }
 
-a.logo {
-    display: block;
+nav a.logobutton {
+    height: auto;
 }
 img.logo_img {
     width: 100%;
     height: auto;
-    /*max-width: 600px;*/
 }
+.menucontainer {
+    height: auto;
+    padding-top: 10px;
+}
+.menucontainer a {
+    margin: 0;
+}
+
 .mobileonly {
     display: none;
 }
 }
 
 /***************************** Mobile *****************************************/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
 
 nav {
     z-index: 10;
@@ -122,14 +133,12 @@ nav a.logobutton {
         var(--mobile-logo-margin-bottom) 0;
     /* border: 1px solid orange; */
 }
-nav a.logo { float: left; }
+nav a#rom_logo { float: left; }
 nav a.menubutton { float: right; }
 
 img.logo_img {
     height: 100%;
     width: auto;
-    padding: 0;
-    margin: 0;
     /* border: 1px solid green; */
 }
 
@@ -137,7 +146,7 @@ a#menu_close { display: none; }
 #menu:target a#menu_open { display: none; }
 #menu:target a#menu_close { display: block; }
 #menu:target {
-    height: 18.5em;
+    height: 18.5em; /* hacky */
     /* height: auto; */ /* No transition for auto-height. Workarounds:
     /* https://css-tricks.com/using-css-transitions-auto-dimensions/ */
 }
@@ -154,5 +163,6 @@ main#content_area {
 /***************************** Mini Mobile *****************************************/
 @media screen and (max-width: 330px) {
 
-#menu:target { height: auto; }
+#menu:target { height: 22em; }  /* hacky */
+
 }

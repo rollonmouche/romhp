@@ -57,7 +57,7 @@ table.gigs_home td.tabkey {
     text-align: left;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
 
 th, td {
     display: block;
