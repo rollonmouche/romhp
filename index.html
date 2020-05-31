@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" id="topp">
 
 <head>
     <meta charset="utf-8">
@@ -16,28 +16,23 @@
 </head>
 
 <body>
+    <div id="top"></div>  <!-- dummy with fixed position used as link target -->
     <div id="wrapper">
-        <!-- header only displayed on mobile screens: -->
-        <header class="mobile_header">
-            <a id="rom_burger" href="#menu">
-                <img id="rom_burger_img" src="graphics/rom_burger.png" alt="Menu">
+        <nav id="menu">
+            <a id="menu_open" class="logobutton menubutton mobileonly" href="#menu">
+                <img class="logo_img" src="graphics/rom_burger.png" alt="Menu">
             </a>
-            <a id="logo_mobile" href="index.html">
-                <img src="graphics/headerlogo.png" alt="Roll on Mouche">
+            <a id="menu_close" class="logobutton menubutton mobileonly" href="#top">
+                <img class="logo_img" src="graphics/rom_exit.png" alt="Menu">
             </a>
-        </header>
-        
-        <!-- navigation bar or mobile menu -->
-        <nav id="navi_area">
-            <a id="logo" href="index.html" tabindex="1">
-                <img id="logo_img" src="graphics/headerlogo.png" alt="Roll on Mouche">
+            <a class="logobutton logo" href="index.html" tabindex="1">
+                <img class="logo_img" src="graphics/headerlogo.png" alt="Roll on Mouche">
             </a>
-            <div class="menucontainer" id="menu">
-                <a class="active burgeronly" href="index.html">Home</a>
+            <div class="menucontainer">
+                <a class="active mobileonly" href="index.html">Home</a>
                 <a class="noactive" href="live.html">Live</a>
                 <a class="noactive" href="media.html">Media</a>
                 <a class="noactive" href="booking.html">Booking</a>
-                <a class="noactive burgeronly menuexit" href="#wrapper" style="font-size: 150%">&times;</a>
             </div>
         </nav>
         
