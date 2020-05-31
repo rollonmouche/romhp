@@ -12,7 +12,14 @@
     --navitem-padding-lr: 20px;
     --article-margin: 30px;
     
-    --mobile_logo_height: 24px;
-    --mobile-header-height: 50px;
-    --burger-padding: 6px;
+    --logo-height: 65px;
+
+    --mobile-logo-height: 24px;
+    --mobile-logo-margin-top: 14px;
+    --mobile-logo-margin-bottom: 18px;
+    --mobile-header-height: calc(
+        var(--mobile-logo-height) +
+        var(--mobile-logo-margin-top) +
+        var(--mobile-logo-margin-bottom)
+    );
 }

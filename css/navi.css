@@ -5,10 +5,11 @@ nav {
     overflow: hidden;
     background: var(--rom-red);
     padding:
-        20px
+        25px
         calc(var(--content-padding-lr) - var(--navitem-padding-lr))
-        10px
+        20px
         calc(var(--content-padding-lr) - var(--navitem-padding-lr));
+    margin: 0;
     margin: 0;
     border-bottom: solid 6px var(--rom-blue);
     /* if position is fixed, width refers to viewport, else to parent element */
@@ -18,157 +19,150 @@ nav {
     width: 100%;
     */
 }
-nav a {
+/* nav a { border: 1px solid gainsboro; } */
+nav a.logobutton {
+    height: var(--logo-height);
+    width: auto;
+    /* border: 1px solid red; */
+}
+nav a.logobutton:hover {
+    background: none;
+}
+nav a#rom_logo {
+    display: block;
+    float: left;
+    padding: 0;
+}
+img.logo_img {
+    height: 100%;
+    width: auto;
+}
+.menucontainer {
+    float: right;
+    height: var(--logo-height);
+    /* border: 1px solid green; */
+}
+.menucontainer a {
     float: left;
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
     padding: 3px var(--navitem-padding-lr) 0 var(--navitem-padding-lr);
+    margin-top: 40px; /* approx. alignment with logo */
 }
-nav a:link,
-nav a:visited {
+.menucontainer a:link,
+.menucontainer a:visited {
     color: var(--rom-lightgrey);
 }
-nav a:hover {
+.menucontainer a:hover {
     background: var(--rom-blue);
     color: var(--rom-lightgrey);
 }
-nav a.active {
+.menucontainer a.active {
     background: var(--rom-blue);
 }
-nav a#logo {
-    padding-top: 6px;
-    padding-right: 0;
-}
-nav a#logo:hover {
-    background: var(--rom-red);
-}
-#logo_img {
-    height: 65px;
-    width: auto;
-}
-.menucontainer {
-    float: right;
-    /*border: 1px solid green;*/
-}
-.menucontainer a {
-    margin-top: 45px; /* approx. alignment with logo */
-}
-.burgeronly {
-    display: none;
-}
-.mobile_header {
+.mobileonly {
     display: none;
 }
 
 /*********************** Tablet or tiled window *******************************/
-@media screen and (max-width: 1150px) and (min-width: 601px){
+@media screen and (max-width: 1140px) and (min-width: 551px){
 
-.menucontainer {
-    display: block;
-}
-.menucontainer a {
-    margin-top: 10px;
+nav {
+    padding-bottom: 10px;
 }
 
-a#logo {
-    display: block;
+nav a.logobutton {
+    height: auto;
 }
-#logo_img {
+img.logo_img {
     width: 100%;
     height: auto;
-    /*max-width: 600px;*/
+}
+.menucontainer {
+    height: auto;
+    padding-top: 10px;
+}
+.menucontainer a {
+    margin: 0;
+}
+
+.mobileonly {
+    display: none;
 }
 }
 
 /***************************** Mobile *****************************************/
-@media screen and (max-width: 600px) {
-
-#wrapper {
-    display: flex; 
-    display: -webkit-flex; 
-    flex-direction: column;
-    -webkit-flex-direction: column;  
-}	
+@media screen and (max-width: 550px) {
 
 nav {
-    height: 600px;
-    padding-top: 50px;
-    /* background: green; */
-    border-bottom: none;
-    order: 1;
-    -webkit-order: 1;
-}
-/* place socialmedia icons below navigation */
-.footer {
-    order: 2;
-    -webkit-order: 2;
-}
-.menucontainer {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding-top: calc(var(--mobile-header-height) + 20px);
-    /* background: var(--rom-orange); */
-}
-.menucontainer a {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 15px 0;
-    /*background: var(--rom-blue);*/
-}
-.mobile_header {
     z-index: 10;
     display: block;
     background: var(--rom-red);
+    transition: 0.15s ease-out;
     border-bottom: solid 4px var(--rom-blue);
     position: fixed;
     width: 100%;
     top: 0;
     height: var(--mobile-header-height);
-    /*box-sizing: border-box;*/
-    padding: 6px var(--content-padding-lr) 4px var(--content-padding-lr);
+    max-height: 50em;
+    box-shadow: 0 0px 10px black;
+    /* box-sizing: border-box; */
+    padding: 0px var(--content-padding-lr);
 }
-a#logo {
-    display: none;
-}
-a#logo_mobile {
+div.menucontainer {
     display: block;
-    float: left;
+    width: 100%;
+    padding-top: 0;
+}
+div.menucontainer a {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 1em 0;
+}
+
+nav a.logobutton {
+    display: block;
+    cursor: pointer;
+    height: var(--mobile-logo-height);
     width: auto;
     padding: 0;
-    margin: var(--burger-padding) 0;
-    /*border: 1px solid green;*/
+    margin:
+        var(--mobile-logo-margin-top) 0
+        var(--mobile-logo-margin-bottom) 0;
+    /* border: 1px solid orange; */
 }
-a#logo_mobile img {
-    height: var(--mobile_logo_height);
+nav a#rom_logo { float: left; }
+nav a.menubutton { float: right; }
+
+img.logo_img {
+    height: 100%;
+    width: auto;
+    /* border: 1px solid green; */
 }
+
+a#menu_close { display: none; }
+#menu:target a#menu_open { display: none; }
+#menu:target a#menu_close { display: block; }
+#menu:target {
+    height: 18.5em; /* hacky */
+    /* height: auto; */ /* No transition for auto-height. Workarounds:
+    /* https://css-tricks.com/using-css-transitions-auto-dimensions/ */
+}
+#top {
+    display: none;
+    position: fixed;
+}
+
 main#content_area {
     margin-top: var(--mobile-header-height);
 }
-a#rom_burger {
-    display: block;
-    float: right;
-    cursor: pointer;
-    height: calc(var(--mobile_logo_height) + 2*var(--burger-padding));
-    width: auto;
-    padding: var(--burger-padding) 0;
-    padding-left: 0;
-    margin: 0;
-    margin-left: 4px;
-    /*border: 1px solid orange;*/
 }
-nav a.menuexit:hover {
-    background: none;
-    color: var(--rom-blue);
-}
-#rom_burger_img {
-    height: 100%;
-    width: auto;
-    padding: 0;
-    margin: 0;
-    /*border: 1px solid green;*/
-}
+
+/***************************** Mini Mobile *****************************************/
+@media screen and (max-width: 330px) {
+
+#menu:target { height: 22em; }  /* hacky */
 
 }
