@@ -58,9 +58,9 @@ DRY="--dry-run"
 # -----------------------------------------------------------------------------
 # the hardcoded parameters
 # -----------------------------------------------------------------------------
-FTPSERVER="web10.greensta.de"  # no trailing "/"
+FTPSERVER=`cat ../servername.txt`  # make sure not to have a trailing "/"
 FTPUSER=`cat ../username.txt`
-[ -z $DEST_PATH ] && DEST_PATH="/run/user/1000/gvfs/ftp:host=$FTPSERVER,user=$FTPUSER/web"
+DEST_PATH_SERVER="/run/user/1000/gvfs/ftp:host=$FTPSERVER,user=$FTPUSER/web"
 TMP_DIR="$SRC_PATH.rsync_tmp"
 SERVER_URL="ftp://$FTPUSER@$FTPSERVER"
 
@@ -69,8 +69,15 @@ SERVER_URL="ftp://$FTPUSER@$FTPSERVER"
 # -----------------------------------------------------------------------------
 [ ! -d $TMP_DIR ] && echo "Create tmp dir $TMP_DIR …" && mkdir $TMP_DIR
 
-echo "Mount FTP server …"
-gvfs-mount $SERVER_URL
+if [ -z $DEST_PATH ]; then
+    DEST_PATH=$DEST_PATH_SERVER
+    DO_MOUNT=true
+fi
+
+if [ "$DO_MOUNT" = true ]; then
+    echo "Mount FTP server …"
+    gvfs-mount $SERVER_URL
+fi
 
 echo "Start sync …"
 rsync \
@@ -90,12 +97,16 @@ rsync \
     $SRC_PATH \
     $DEST_PATH
 
-if [ -z $KEEPMOUNT ]; then
-    echo "Unmount FTP server …"
-    gvfs-mount -u $SERVER_URL
-    echo "Done."
+if [ "$DO_MOUNT" = true ]; then
+    if [ -z $KEEPMOUNT ]; then
+        echo "Unmount FTP server …"
+        gvfs-mount -u $SERVER_URL
+        echo "Done."
+    else
+        echo "Done."
+        echo "Server still mounted. Unmount with"
+        echo "gvfs-mount -u $SERVER_URL"
+    fi
 else
     echo "Done."
-    echo "Server still mounted. Unmount with"
-    echo "gvfs-mount -u $SERVER_URL"
 fi
