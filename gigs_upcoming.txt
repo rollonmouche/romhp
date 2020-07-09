@@ -1,5 +1,4 @@
-#pack2020
-date: 03.07.2020
-venue: Packhalle Open Air, Sögel
-url: https://www.packhalle-openair.de/
-add: – FÄLLT AUS! –
+#mei2021
+date: 07.04.2021
+venue: Meisenfrei, Bremen
+url: http://meisenfrei.de
