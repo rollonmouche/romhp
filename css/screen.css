@@ -40,7 +40,6 @@ a:hover {
 }
 a:active, a:focus {
     color: var(--rom-gold);
-    text-shadow: 0.1em 0 0 var(--rom-blue);
 }
 
 } /* @media */
