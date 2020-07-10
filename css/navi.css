@@ -46,7 +46,8 @@ img.logo_img {
     float: left;
     text-align: center;
     text-decoration: none;
-    border-radius: 8px;
+    border: solid 2px var(--rom-red);
+    border-radius: 10px;
     padding: 3px var(--navitem-padding-lr) 0 var(--navitem-padding-lr);
     margin-top: 40px; /* approx. alignment with logo */
 }
@@ -66,7 +67,7 @@ img.logo_img {
 }
 
 /*********************** Tablet or tiled window *******************************/
-@media screen and (max-width: 1140px) and (min-width: 551px){
+@media screen and (max-width: 1210px) and (min-width: 551px){
 
 nav {
     padding-bottom: 10px;
@@ -146,7 +147,7 @@ a#menu_close { display: none; }
 #menu:target a#menu_open { display: none; }
 #menu:target a#menu_close { display: block; }
 #menu:target {
-    height: 18.5em; /* hacky */
+    height: 19.0em; /* hacky */
     /* height: auto; */ /* No transition for auto-height. Workarounds:
     /* https://css-tricks.com/using-css-transitions-auto-dimensions/ */
 }
