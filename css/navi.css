@@ -49,7 +49,7 @@ img.logo_img {
     border: solid 2px var(--rom-red);
     border-radius: 10px;
     padding: 3px var(--navitem-padding-lr) 0 var(--navitem-padding-lr);
-    margin-top: 40px; /* approx. alignment with logo */
+    margin-top: 36px; /* approx. alignment with logo */
 }
 .menucontainer a:link,
 .menucontainer a:visited {
@@ -67,7 +67,7 @@ img.logo_img {
 }
 
 /*********************** Tablet or tiled window *******************************/
-@media screen and (max-width: 1210px) and (min-width: 551px){
+@media screen and (max-width: 1225px) and (min-width: 551px){
 
 nav {
     padding-bottom: 10px;
